@@ -22,7 +22,7 @@ bool Prime::checkPrime(int n) {
 
 int Prime::countBetween(Prime& a) {
 	int count = 0;
-	for (int i = min(number, a.number); i < max(number, a.number); ++i)
+	for (int i = min(number, a.number)+1; i < max(number, a.number); ++i)
 		if (checkPrime(i)) count++;
 	return count;
 }
